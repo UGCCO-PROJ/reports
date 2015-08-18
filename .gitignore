@@ -1,0 +1,4 @@
+# Nested GIT Repository folders to ignore
+Thumbs.db
+thumbs.db
+*.jasper
