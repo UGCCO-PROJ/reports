@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.1.0.final using JasperReports Library version 6.1.0  -->
-<!-- 2015-12-14T03:54:30 -->
+<!-- 2015-12-15T00:38:34 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Claim certificate" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="535" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" resourceBundle="Bundle" uuid="985fe8fc-59be-4ab1-adfa-106164917efc">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="SOLA_DATAADAPTER.xml"/>
-	<property name="ireport.jasperserver.url" value="http://localhost:8080/jasperserver/"/>
+	<property name="ireport.jasperserver.url" value="http://demo.opentenure.org/jasperserver/"/>
 	<property name="ireport.jasperserver.user" value="jasperadmin"/>
-	<property name="ireport.jasperserver.report.resource" value="/reports/Claim_certificate_files/main_jrxml"/>
-	<property name="ireport.jasperserver.reportUnit" value="/reports/Claim_certificate"/>
+	<property name="ireport.jasperserver.report.resource" value="/reports/demo/cert/Claim_certificate_files/main_jrxml"/>
+	<property name="ireport.jasperserver.reportUnit" value="/reports/demo/cert/Claim_certificate"/>
 	<property name="com.jaspersoft.studio.unit." value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.pageHeight" value="cm"/>
 	<property name="com.jaspersoft.studio.unit.pageWidth" value="cm"/>
@@ -87,7 +87,7 @@ WHERE c.id = $P{id}]]>
 	<field name="rejection_reason_code" class="java.lang.String"/>
 	<field name="claim_area" class="java.lang.Long"/>
 	<background>
-		<band height="801" splitType="Stretch">
+		<band height="784" splitType="Stretch">
 			<printWhenExpression><![CDATA[!$F{status_code}.equalsIgnoreCase("moderated")]]></printWhenExpression>
 			<textField>
 				<reportElement x="3" y="138" width="528" height="111" forecolor="#D4D4D4" uuid="0930037c-273f-4a27-9a57-56ed66ba36a3">
@@ -134,9 +134,9 @@ WHERE c.id = $P{id}]]>
 		</band>
 	</title>
 	<detail>
-		<band height="574" splitType="Stretch">
+		<band height="564" splitType="Stretch">
 			<subreport>
-				<reportElement positionType="Float" x="5" y="163" width="525" height="40" uuid="92246e2a-5557-4469-a1ce-30343851b1bb"/>
+				<reportElement positionType="Float" x="5" y="154" width="525" height="40" uuid="92246e2a-5557-4469-a1ce-30343851b1bb"/>
 				<subreportParameter name="claim_id">
 					<subreportParameterExpression><![CDATA[$F{id}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -191,7 +191,7 @@ WHERE c.id = $P{id}]]>
 				<textFieldExpression><![CDATA[T($F{description})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" x="7" y="142" width="523" height="20" uuid="6f8d9d3c-a437-4bd4-a468-f73fc5a03874"/>
+				<reportElement positionType="Float" x="7" y="133" width="523" height="20" uuid="6f8d9d3c-a437-4bd4-a468-f73fc5a03874"/>
 				<textElement>
 					<font fontName="SansSerif" size="14"/>
 				</textElement>
@@ -219,14 +219,14 @@ WHERE c.id = $P{id}]]>
 				<textFieldExpression><![CDATA[($F{lodgement_date} == null ? "" : $F{lodgement_date})]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" x="7" y="220" width="180" height="20" uuid="5892ce63-6207-428f-bcc7-d5bbe7726532"/>
+				<reportElement positionType="Float" x="7" y="209" width="180" height="20" uuid="5892ce63-6207-428f-bcc7-d5bbe7726532"/>
 				<textElement>
 					<font fontName="SansSerif" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{land_plan}]]></textFieldExpression>
 			</textField>
 			<image scaleImage="RealSize" hAlign="Center" vAlign="Middle" isUsingCache="false" isLazy="true" evaluationTime="Report">
-				<reportElement positionType="Float" x="7" y="240" width="523" height="330" uuid="c65d308e-eebc-43d4-8a39-9507f420dcf9">
+				<reportElement positionType="Float" x="7" y="229" width="523" height="330" uuid="c65d308e-eebc-43d4-8a39-9507f420dcf9">
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
@@ -241,7 +241,7 @@ WHERE c.id = $P{id}]]>
 		</band>
 	</detail>
 	<lastPageFooter>
-		<band height="74">
+		<band height="63">
 			<line>
 				<reportElement x="5" y="58" width="530" height="1" uuid="1c478a6b-bea3-4192-8ac0-e25563cbf388"/>
 			</line>
